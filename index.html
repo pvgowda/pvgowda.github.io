@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preethi Gowda | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      background: #fefefe;
+      color: #333;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    header {
+      padding: 120px 20px 60px;
+      text-align: center;
+      background: linear-gradient(to bottom right, #f3ec78, #af4261);
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #6a11cb;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .about-photo img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      object-fit: cover;
+      height: auto;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .project-card {
+      padding: 1rem;
+      background: #f0f4ff;
+      border: 2px solid #c7d2fe;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(106, 17, 203, 0.2);
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .button-link {
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .button-link:hover {
+      transform: scale(1.05);
+    }
+
+    .button-link.linkedin {
+      background: #0077B5;
+    }
+
+    .button-link.linkedin:hover {
+      background: #005983;
+    }
+
+    .button-link.resume {
+      background: #28a745;
+    }
+
+    .button-link.resume:hover {
+      background: #1e7e34;
+    }
+
+    .button-link img {
+      width: 20px;
+      height: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e0e7ff;
+      color: #333;
+    }
+
+    a {
+      color: #2575fc;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <h1 id="greeting"></h1>
+    <p>Legal and Policy Analyst at MediBlock, INC.</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>
+        I'm Preethi Gowda, a Legal and Policy Analyst with a passion for
+        technology, data privacy, and public policy. I thrive at the
+intersection
+        of innovation and regulation, and enjoy crafting policy frameworks that
+        support ethical tech adoption.
+      </p>
+      <div class="about-photo">
+        <img src="https://source.unsplash.com/800x500/?photographer"
+alt="Photography of Preethi">
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Data Privacy Policy Framework</h3>
+        <p>Developed a compliance model for decentralized health data
+systems.</p>
+      </div>
+      <div class="project-card">
+        <h3>Legal Analysis for AI Ethics</h3>
+        <p>Conducted legal research on AI regulation and bias mitigation.</p>
+      </div>
+      <div class="project-card">
+        <h3>HealthTech Legislation Review</h3>
+        <p>Advised on telemedicine and digital health laws across
+jurisdictions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume & Links</h2>
+    <div class="button-group">
+      <a class="button-link linkedin"
+href="https://www.linkedin.com/in/preethi-gowda" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+alt="LinkedIn Logo">LinkedIn
+      </a>
+      <a class="button-link resume" href="#" download>
+        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png"
+alt="Download Icon">Download Resume
+      </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:pv239@georgetown.edu">pv239@georgetown.edu</a></p>
+    <p>Phone: <a href="tel:+12026996679">+1 202 699 6679</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/preethi-gowda"
+target="_blank">Preethi Gowda</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Preethi Gowda | Portfolio</p>
+  </footer>
+
+  <script>
+    const greeting = document.getElementById("greeting");
+    const hour = new Date().getHours();
+    const name = "I'm Preethi Gowda.";
+    if (hour < 12) greeting.innerText = `Good Morning, ${name}`;
+    else if (hour < 18) greeting.innerText = `Good Afternoon, ${name}`;
+    else greeting.innerText = `Good Evening, ${name}`;
+  </script>
+</body>
+</html>
