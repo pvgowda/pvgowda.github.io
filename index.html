@@ -81,13 +81,13 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .project-grid {
+    .project-grid, .experience-grid {
       display: grid;
       gap: 1rem;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
-    .project-card {
+    .project-card, .experience-card {
       padding: 1rem;
       background: #f0f4ff;
       border: 2px solid #c7d2fe;
@@ -95,7 +95,7 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .project-card:hover {
+    .project-card:hover, .experience-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 15px rgba(106, 17, 203, 0.2);
     }
@@ -165,6 +165,7 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -180,13 +181,11 @@
       <p>
         I'm Preethi Gowda, a Legal and Policy Analyst with a passion for
         technology, data privacy, and public policy. I thrive at the
-intersection
-        of innovation and regulation, and enjoy crafting policy frameworks that
+        intersection of innovation and regulation, and enjoy crafting policy frameworks that
         support ethical tech adoption.
       </p>
       <div class="about-photo">
-        <img src="https://source.unsplash.com/800x500/?photographer"
-alt="Photography of Preethi">
+        <img src="https://source.unsplash.com/800x500/?photographer" alt="Photography of Preethi">
       </div>
     </div>
   </section>
@@ -196,8 +195,7 @@ alt="Photography of Preethi">
     <div class="project-grid">
       <div class="project-card">
         <h3>Data Privacy Policy Framework</h3>
-        <p>Developed a compliance model for decentralized health data
-systems.</p>
+        <p>Developed a compliance model for decentralized health data systems.</p>
       </div>
       <div class="project-card">
         <h3>Legal Analysis for AI Ethics</h3>
@@ -205,8 +203,28 @@ systems.</p>
       </div>
       <div class="project-card">
         <h3>HealthTech Legislation Review</h3>
-        <p>Advised on telemedicine and digital health laws across
-jurisdictions.</p>
+        <p>Advised on telemedicine and digital health laws across jurisdictions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <h3>MediBlock, INC.</h3>
+        <p><strong>Legal and Policy Analyst</strong><br>2023 - Present</p>
+        <p>Leading legal analysis and policy drafting for blockchain-based health data systems.</p>
+      </div>
+      <div class="experience-card">
+        <h3>Georgetown Law Center</h3>
+        <p><strong>Research Assistant</strong><br>2022 - 2023</p>
+        <p>Assisted in researching U.S. federal tech regulations and drafting academic articles on AI governance.</p>
+      </div>
+      <div class="experience-card">
+        <h3>World Bank</h3>
+        <p><strong>Policy Intern</strong><br>2021 - 2022</p>
+        <p>Worked on global digital ID standards and regulatory impact assessments for emerging markets.</p>
       </div>
     </div>
   </section>
@@ -214,14 +232,11 @@ jurisdictions.</p>
   <section id="resume">
     <h2>Resume & Links</h2>
     <div class="button-group">
-      <a class="button-link linkedin"
-href="https://www.linkedin.com/in/preethi-gowda" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-alt="LinkedIn Logo">LinkedIn
+      <a class="button-link linkedin" href="https://www.linkedin.com/in/preethi-gowda" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">LinkedIn
       </a>
       <a class="button-link resume" href="#" download>
-        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png"
-alt="Download Icon">Download Resume
+        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png" alt="Download Icon">Download Resume
       </a>
     </div>
   </section>
@@ -230,8 +245,7 @@ alt="Download Icon">Download Resume
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:pv239@georgetown.edu">pv239@georgetown.edu</a></p>
     <p>Phone: <a href="tel:+12026996679">+1 202 699 6679</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/preethi-gowda"
-target="_blank">Preethi Gowda</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/preethi-gowda" target="_blank">Preethi Gowda</a></p>
   </section>
 
   <footer>
