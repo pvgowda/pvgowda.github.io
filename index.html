@@ -20,22 +20,79 @@
       background: linear-gradient(90deg, #6a11cb, #2575fc);
       color: white;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
       padding: 1rem;
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    nav a {
+    .nav-logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
       color: white;
-      margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: #ffe600;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #6a11cb;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .mobile-menu a {
+      padding: 1rem;
+      border-top: 1px solid #ffffff33;
+      color: white;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      background-color: #005983;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .mobile-menu.active {
+        display: flex;
+      }
     }
 
     header {
@@ -162,12 +219,28 @@
 </head>
 <body>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-logo">Preethi</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="toggleMenu()">Home</a>
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#projects" onclick="toggleMenu()">Projects</a>
+      <a href="#experience" onclick="toggleMenu()">Experience</a>
+      <a href="#resume" onclick="toggleMenu()">Resume</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
   </nav>
 
   <header id="home">
@@ -178,12 +251,7 @@
   <section id="about">
     <h2>About Me</h2>
     <div class="about-content">
-      <p>
-        I'm Preethi Gowda, a Legal and Policy Analyst with a passion for
-        technology, data privacy, and public policy. I thrive at the
-        intersection of innovation and regulation, and enjoy crafting policy frameworks that
-        support ethical tech adoption.
-      </p>
+      <p>I'm Preethi Gowda,</p>
       <div class="about-photo">
         <img src="https://source.unsplash.com/800x500/?photographer" alt="Photography of Preethi">
       </div>
@@ -229,6 +297,18 @@
     </div>
   </section>
 
+  <section id="experience">
+    <h2>Publications</h2>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <h3>Green Protectionism and Great Power Competition</h3>
+        <p>2024</p>
+        <p>Leading legal analysis and policy drafting for blockchain-based health data systems.</p>
+        <li><a href="https://www.stimson.org/2025/great-power-competition-and-green-protectionism/">Publication Link</a></li>
+      </div>
+    </div>
+  </section>
+
   <section id="resume">
     <h2>Resume & Links</h2>
     <div class="button-group">
@@ -259,6 +339,11 @@
     if (hour < 12) greeting.innerText = `Good Morning, ${name}`;
     else if (hour < 18) greeting.innerText = `Good Afternoon, ${name}`;
     else greeting.innerText = `Good Evening, ${name}`;
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
   </script>
 </body>
 </html>
