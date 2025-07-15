@@ -5,34 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Preethi Gowda | Portfolio</title>
 <style>
-  body {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+  * {
+    box-sizing: border-box;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    line-height: 1.6;
     scroll-behavior: smooth;
-    background: #f9fbfd;
-    color: #2c3e50;
   }
 
   nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     width: 100%;
-    background-color: #1f3a93;
+    background-color: rgba(20, 20, 30, 0.85);
+    backdrop-filter: blur(10px);
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .nav-logo {
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #f4b400;
   }
 
   .nav-links {
@@ -41,112 +47,140 @@
   }
 
   .nav-links a {
-    color: white;
+    color: #f1f1f1;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: all 0.3s;
   }
 
   .nav-links a:hover {
-    color: #ffe600;
+    color: #f4b400;
+    transform: translateY(-2px);
   }
 
   .hamburger {
     display: none;
     flex-direction: column;
-    cursor: pointer;
     gap: 5px;
-    z-index: 1001;
-    margin-left: auto;
+    cursor: pointer;
   }
 
   .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background: white;
   }
 
   .mobile-menu {
     display: none;
     flex-direction: column;
-    background: #1f3a93;
+    background: #14141e;
     position: absolute;
     top: 100%;
     left: 0;
-    right: 0;
     width: 100%;
     text-align: center;
-    z-index: 1000;
+    z-index: 999;
   }
 
   .mobile-menu a {
     padding: 1rem;
-    border-top: 1px solid #ffffff33;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     text-decoration: none;
   }
 
   .mobile-menu a:hover {
-    background-color: #154a8a;
+    background: #2c5364;
   }
 
   @media (max-width: 768px) {
     .nav-links {
       display: none;
     }
-
     .hamburger {
       display: flex;
     }
-
     .mobile-menu.active {
       display: flex;
     }
   }
 
   header {
-    padding: 120px 20px 60px;
     text-align: center;
-    background: linear-gradient(to bottom right, #4facfe, #00f2fe);
-    color: white;
+    padding: 140px 20px 60px;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #fff;
   }
 
   header h1 {
-    margin: 0;
-    font-size: 2.8rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
 
   header p {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    opacity: 0.85;
   }
 
   section {
-    padding: 60px 20px;
-    max-width: 900px;
+    padding: 70px 20px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
   h2 {
-    color: #1f3a93;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #f4b400;
+    padding-left: 15px;
   }
 
   .about-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     text-align: center;
   }
 
   .about-photo img {
+    max-width: 320px;
     width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    object-fit: cover;
-    height: auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .button-link {
+    padding: 0.8rem 1.6rem;
+    background: #f4b400;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .button-link:hover {
+    background: #e2a500;
+    transform: translateY(-2px);
+  }
+
+  .button-link img {
+    width: 20px;
+    height: 20px;
   }
 
   .project-grid,
@@ -158,89 +192,46 @@
 
   @media (min-width: 600px) {
     .project-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
   }
 
   .project-card,
   .experience-card {
-    padding: 1.2rem;
-    background: #eef4fc;
-    border: 2px solid #d0dffc;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
     transition: transform 0.3s, box-shadow 0.3s;
   }
 
   .project-card:hover,
   .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(31, 58, 147, 0.15);
-  }
-
-  .button-group {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 1.5rem;
-  }
-
-  .button-link {
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background 0.3s, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .button-link:hover {
-    transform: scale(1.05);
-  }
-
-  .button-link.linkedin {
-    background: #0a66c2;
-  }
-
-  .button-link.linkedin:hover {
-    background: #004182;
-  }
-
-  .button-link.resume {
-    background: #2ecc71;
-  }
-
-  .button-link.resume:hover {
-    background: #27ae60;
-  }
-
-  .button-link img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(100%) contrast(120%);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   }
 
   footer {
+    background: #10141c;
     text-align: center;
     padding: 2rem;
-    background: #dde9f8;
-    color: #2c3e50;
+    color: #999;
+    font-size: 0.95rem;
+    border-top: 1px solid #444;
   }
 
   a {
-    color: #1f3a93;
+    color: #f4b400;
+    text-decoration: none;
   }
 
   a:hover {
     text-decoration: underline;
   }
 </style>
+
 
 
 <nav>
